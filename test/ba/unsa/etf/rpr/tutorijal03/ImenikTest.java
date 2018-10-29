@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Set;
 
-import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
+import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.*;
+import static ba.unsa.etf.rpr.tutorijal03.Grad.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ImenikTest {

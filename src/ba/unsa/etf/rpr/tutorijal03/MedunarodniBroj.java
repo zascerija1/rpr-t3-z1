@@ -17,4 +17,11 @@ public class MedunarodniBroj extends TelefonskiBroj {
         return broj.hashCode();
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        MedunarodniBroj a=(MedunarodniBroj)o;
+
+        return broj.equals(a.broj);
+    }
 }

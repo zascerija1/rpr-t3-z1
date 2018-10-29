@@ -1,8 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 public class FiksniBroj extends TelefonskiBroj {
-
-    String broj;
+    private    String broj;
 
     public FiksniBroj(Grad grad, String broj){
 
@@ -18,5 +17,12 @@ this.broj+="/"+broj;
     @Override
     public int hashCode() {
         return broj.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        FiksniBroj a=(FiksniBroj)o;
+
+        return broj.equals(a.broj);
     }
 }

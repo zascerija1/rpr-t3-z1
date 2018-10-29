@@ -16,4 +16,11 @@ public class MobilniBroj extends TelefonskiBroj {
     public int hashCode() {
         return broj.hashCode();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        MobilniBroj a=(MobilniBroj)o;
+
+        return broj.equals(a.broj);
+    }
 }
