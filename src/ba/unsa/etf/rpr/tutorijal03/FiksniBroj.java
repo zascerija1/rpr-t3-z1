@@ -2,14 +2,12 @@ package ba.unsa.etf.rpr.tutorijal03;
 
 public class FiksniBroj extends TelefonskiBroj {
 
-    private String broj="";
+    String broj;
 
     public FiksniBroj(Grad grad, String broj){
-        String[] niz={"037","031","035","032","038","030","036","039","033","034"};
-        for(int i=0;i<10;i++) if(i==grad.getIndeks()) this.broj+=niz[i];
+
+        for(int i=0;i<10;i++) if(i==grad.getIndeks()) this.broj=grad.getPozivni();
 this.broj+="/"+broj;
-
-
     }
 
     @Override
