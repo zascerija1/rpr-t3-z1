@@ -25,4 +25,12 @@ this.broj+="/"+broj;
 
         return broj.equals(a.broj);
     }
+
+    @Override
+   public int compareTo(Object o){
+        FiksniBroj a=(FiksniBroj) o;
+        return broj.compareTo(a.broj);
+    }
+
+
 }

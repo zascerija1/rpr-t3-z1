@@ -1,9 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Imenik {
     private HashMap<String, TelefonskiBroj> popis;
@@ -29,22 +26,30 @@ public class Imenik {
     }
 
     public String naSlovo(char s) {
-        String novi = " ";
+        String novi = "";
         int i = 1;
         for (Map.Entry<String, TelefonskiBroj> a : popis.entrySet()) {
             if (a.getKey().charAt(0) == s) {
-                novi += i + a.getKey() + a.getValue().ispisi() + "\n";
+                novi += i +". "+ a.getKey() +" - "+ a.getValue().ispisi() + "\n";
                 i++;
             }
         }
         return novi;
     }
     public Set<String> izGrada(Grad g){
-        HashSet<String> novi=new HashSet<String>();
+        TreeSet<String> novi=new TreeSet<String>();
         for (Map.Entry<String, TelefonskiBroj> a : popis.entrySet()) {
-            if (a.getValue().ispisi().substring(0,2)==(g.getPozivni())) novi.add(a.getKey());
+            if (a.getValue().ispisi().substring(0,3).equals(g.getPozivni())) novi.add(a.getKey());
         }
  return novi;
+    }
+
+    public Set<TelefonskiBroj> izGradaBrojevi(Grad g){
+        TreeSet<TelefonskiBroj> novi=new TreeSet<>();
+        for(Map.Entry<String, TelefonskiBroj> a: popis.entrySet()){
+            if(a.getValue().ispisi().substring(0,3).equals(g.getPozivni())) novi.add(a.getValue());
+        }
+       return novi;
     }
 
 }

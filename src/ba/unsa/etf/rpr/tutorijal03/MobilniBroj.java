@@ -23,4 +23,10 @@ public class MobilniBroj extends TelefonskiBroj {
 
         return broj.equals(a.broj);
     }
+
+    @Override
+    public int compareTo(Object o) {
+        MobilniBroj b=(MobilniBroj)o;
+        return broj.compareTo(b.broj);
+    }
 }

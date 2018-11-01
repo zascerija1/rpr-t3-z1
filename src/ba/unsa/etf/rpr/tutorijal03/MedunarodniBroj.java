@@ -24,4 +24,10 @@ public class MedunarodniBroj extends TelefonskiBroj {
 
         return broj.equals(a.broj);
     }
+
+    @Override
+    public int compareTo(Object o) {
+        MedunarodniBroj m=(MedunarodniBroj)o;
+        return broj.compareTo(m.broj);
+    }
 }

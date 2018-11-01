@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
+import static ba.unsa.etf.rpr.tutorijal03.Grad.SARAJEVO;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -25,5 +27,6 @@ public class Main {
 				"ispravno imenovanje paketa, klasa, metoda i promjenljivih,\n" +
 				"primjenu komentara,\n" +
 				"atomic commits.\n");
+
     }
 }
