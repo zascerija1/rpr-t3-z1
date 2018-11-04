@@ -28,7 +28,7 @@ public class Main {
                 FiksniBroj a = new FiksniBroj(Grad.valueOf(grad), broj);
                 System.out.println("Ako zelite ispisati uneseni broj, unesite 1");
                 int m = ulaz.nextInt();
-                if (m == 1) a.ispisi();
+                if (m == 1) System.out.println(a.ispisi());
                 result = a; break;}
 
 
@@ -39,7 +39,7 @@ public class Main {
                 MobilniBroj a = new MobilniBroj(mreza, broj);
                 System.out.println("Ako zelite ispisati uneseni broj, unesite 1");
                 int m = ulaz.nextInt();
-                if (m == 1) a.ispisi();
+                if (m == 1) System.out.println(a.ispisi());
                 result = a; break;}
 
 
@@ -50,7 +50,7 @@ public class Main {
                 MedunarodniBroj a = new MedunarodniBroj(drzava, broj);
                 System.out.println("Ako zelite ispisati uneseni broj, unesite 1");
                 int m = ulaz.nextInt();
-                if (m == 1) a.ispisi();
+                if (m == 1) System.out.println(a.ispisi());
                 result = a; break;}
         }
 
@@ -85,7 +85,7 @@ do{
                 System.out.println("Unesite ime osobe\n");
                 String ime = ulaz.next();
                 TelefonskiBroj a = unos();
-                imenik.dodaj(ime, (FiksniBroj)a); break;}
+                imenik.dodaj(ime, a); break;}
 
             case 2:{
                 System.out.println("Unesite ime osobe\n");
